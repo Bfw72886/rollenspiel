@@ -25,7 +25,7 @@ public class Krieger extends Charakter implements Angreifer{
     }
 
     @Override
-    public void angreifen(Charakter opfer) {
-        opfer.bekommtSchaden(this.staerke);
+    public void angreifen(Charakter gegner) {
+        gegner.bekommtSchaden(this.staerke);
     }
 }

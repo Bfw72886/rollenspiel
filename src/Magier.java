@@ -25,7 +25,7 @@ public class Magier extends Charakter implements Angreifer{
     }
 
     @Override
-    public void angreifen(Charakter opfer) {
-        opfer.bekommtSchaden(this.intelligenz);
+    public void angreifen(Charakter gegner) {
+        gegner.bekommtSchaden(this.intelligenz);
     }
 }
