@@ -1,4 +1,4 @@
-public class Spaeher extends Charakter{
+public class Spaeher extends Charakter implements Angreifer{
 
     private int beweglichkeit;
     private int ausdauer;
@@ -24,5 +24,10 @@ public class Spaeher extends Charakter{
 
     public void setAusdauer(int ausdauer) {
         this.ausdauer = ausdauer;
+    }
+
+    @Override
+    public void angreifen(Charakter opfer) {
+        opfer.bekommtSchaden(this.beweglichkeit);
     }
 }

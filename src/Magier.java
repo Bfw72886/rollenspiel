@@ -1,4 +1,4 @@
-public class Magier extends Charakter {
+public class Magier extends Charakter implements Angreifer{
     private int mana;
     private int intelligenz;
 
@@ -22,5 +22,10 @@ public class Magier extends Charakter {
 
     public void setIntelligenz(int intelligenz) {
         this.intelligenz = intelligenz;
+    }
+
+    @Override
+    public void angreifen(Charakter opfer) {
+        opfer.bekommtSchaden(this.intelligenz);
     }
 }

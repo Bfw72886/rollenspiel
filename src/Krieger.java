@@ -1,4 +1,4 @@
-public class Krieger extends Charakter{
+public class Krieger extends Charakter implements Angreifer{
     private int staerke;
     private int ruestung;
 
@@ -22,5 +22,10 @@ public class Krieger extends Charakter{
 
     public void setRuestung(int ruestung) {
         this.ruestung = ruestung;
+    }
+
+    @Override
+    public void angreifen(Charakter opfer) {
+        opfer.bekommtSchaden(this.staerke);
     }
 }

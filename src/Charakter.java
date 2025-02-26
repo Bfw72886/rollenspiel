@@ -11,6 +11,13 @@ public class Charakter {
         this.imKampf = imKampf;
     }
 
+    public void bekommtSchaden(int schaden) {
+        gesundheit -= schaden;
+        if (gesundheit < 0) {
+            gesundheit = 0;
+        }
+    }
+
     public String getName() {
         return name;
     }
