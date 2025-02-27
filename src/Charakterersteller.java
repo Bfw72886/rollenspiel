@@ -10,4 +10,8 @@ public class Charakterersteller {
     public Spaeher createSpaeher() {
         return new Spaeher("Augä", 100, 1, false, 5, 50);
     }
+
+    public Monster createMonster() {
+        return new Monster("Golfwolf", 100, 1, false, 5);
+    }
 }
