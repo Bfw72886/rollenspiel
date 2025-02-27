@@ -28,14 +28,26 @@ public class Spaeher extends Charakter implements Angreifer{
 
     @Override
     public void angreifen(Charakter gegner) {
-        gegner.bekommtSchaden(this.beweglichkeit);
+        // chance to crit == 25% of beweglichkeit
+        int critDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        critDiceRoll = Math.round(critDiceRoll / 4.0f); // 0-25
+        boolean isCrit = critDiceRoll <= beweglichkeit;
+        // TODO attack-miss-chance
+
+        if (!isCrit) {
+            gegner.bekommtSchaden(this.beweglichkeit);
+        } else {
+            gegner.bekommtSchaden(this.beweglichkeit * 2);
+        }
     }
 
     @Override
     public void bekommtSchaden(int schaden) {
         // ausdauer == percentage of dodgechance
-        int dodgeDiceRoll = (int) (Math.random() * 100 + 1);
-        if (dodgeDiceRoll > ausdauer) {
+        int dodgeDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        boolean isDodged = dodgeDiceRoll <= ausdauer;
+
+        if (!isDodged) {
             super.bekommtSchaden(schaden);
         }
     }
