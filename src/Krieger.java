@@ -28,4 +28,11 @@ public class Krieger extends Charakter implements Angreifer{
     public void angreifen(Charakter gegner) {
         gegner.bekommtSchaden(this.staerke);
     }
+
+    @Override
+    public void bekommtSchaden(int schaden) {
+        // ruestung == percentage of damagereduction
+        int schadensVerringerung = schaden * (ruestung / 100);
+        super.bekommtSchaden(schaden - schadensVerringerung);
+    }
 }
