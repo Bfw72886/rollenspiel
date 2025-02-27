@@ -28,17 +28,23 @@ public class Spaeher extends Charakter implements Angreifer{
 
     @Override
     public void angreifen(Charakter gegner) {
-        // chance to crit == 25% of beweglichkeit
-        int critDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
-        critDiceRoll = Math.round(critDiceRoll / 4.0f); // 0-25
-        boolean isCrit = critDiceRoll <= beweglichkeit;
         // TODO attack-miss-chance
 
-        if (!isCrit) {
+        if (!isCrit()) {
             gegner.bekommtSchaden(this.beweglichkeit);
         } else {
             gegner.bekommtSchaden(this.beweglichkeit * 2);
         }
+    }
+
+    /**
+     * chance to crit == 25% of beweglichkeit
+     * @return true if critchance was sufficient
+     */
+    private boolean isCrit() {
+        int critDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        critDiceRoll = Math.round(critDiceRoll / 4.0f); // 0-25
+        return critDiceRoll <= beweglichkeit;
     }
 
     @Override
