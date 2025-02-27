@@ -1,11 +1,11 @@
 public class Magier extends Charakter implements Angreifer{
-    private int mana;
     private int intelligenz;
+    private int mana;
 
-    public Magier(String name, int gesundheit, int level, boolean imKampf, int mana, int intelligenz) {
+    public Magier(String name, int gesundheit, int level, boolean imKampf, int intelligenz, int mana) {
         super(name, gesundheit, level, imKampf);
-        this.mana = mana;
         this.intelligenz = intelligenz;
+        this.mana = mana;
     }
 
     public int getMana() {
