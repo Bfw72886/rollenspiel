@@ -26,6 +26,13 @@ public class Magier extends Charakter implements Angreifer{
 
     @Override
     public void angreifen(Charakter gegner) {
-        gegner.bekommtSchaden(this.intelligenz);
+        if (this.mana > 40) {
+            gegner.bekommtSchaden(Math.round(this.intelligenz * 1.5f));
+            mana -= 40;
+        } else {
+            gegner.bekommtSchaden(this.intelligenz);
+            mana += 10;
+        }
+
     }
 }
