@@ -42,7 +42,7 @@ public class Spaeher extends Charakter implements Angreifer{
      * @return true if critchance was sufficient
      */
     private boolean isCrit() {
-        int critDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        int critDiceRoll = rollD100();
         critDiceRoll = Math.round(critDiceRoll / 4.0f); // 0-25
         return critDiceRoll <= beweglichkeit;
     }
@@ -52,7 +52,7 @@ public class Spaeher extends Charakter implements Angreifer{
      * @return true if missChance was sufficient
      */
     private boolean hasMissed() {
-        int missDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        int missDiceRoll = rollD100();
         return missDiceRoll <= 10;
     }
 
@@ -68,7 +68,15 @@ public class Spaeher extends Charakter implements Angreifer{
      * @return true if dodgechance was sufficient
      */
     private boolean hasDodged() {
-        int dodgeDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        int dodgeDiceRoll = rollD100();
         return dodgeDiceRoll <= ausdauer;
+    }
+
+    /**
+     * reference to boardgame dnd
+     * @return 1-100 (randomly)
+     */
+    private int rollD100() {
+        return (int) (Math.random() * 100 + 1);
     }
 }
