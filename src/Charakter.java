@@ -1,4 +1,4 @@
-public class Charakter {
+public abstract class Charakter {
     private String name;
     private final int maxGesundheit;
     private int gesundheit;
@@ -19,6 +19,8 @@ public class Charakter {
             gesundheit = 0;
         }
     }
+
+    public abstract void angreifen(Charakter gegner);
 
     public String getName() {
         return name;

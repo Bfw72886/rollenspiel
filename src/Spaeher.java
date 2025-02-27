@@ -1,4 +1,4 @@
-public class Spaeher extends Charakter implements Angreifer{
+public class Spaeher extends Charakter{
 
     private int beweglichkeit;
     private int ausdauer;

@@ -1,4 +1,4 @@
-public class Magier extends Charakter implements Angreifer{
+public class Magier extends Charakter{
     private int intelligenz;
     private int mana;
 

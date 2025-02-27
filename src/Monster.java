@@ -1,4 +1,4 @@
-public class Monster extends Charakter implements Angreifer{
+public class Monster extends Charakter{
     private int angriffswert;
 
     public Monster(String name, int gesundheit, int level, boolean imKampf, int angriffswert) {

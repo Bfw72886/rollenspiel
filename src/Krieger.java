@@ -1,4 +1,4 @@
-public class Krieger extends Charakter implements Angreifer{
+public class Krieger extends Charakter{
     private int staerke;
     private int ruestung;
 
