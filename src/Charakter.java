@@ -1,5 +1,6 @@
 public class Charakter {
     private String name;
+    private final int maxGesundheit;
     private int gesundheit;
     private int level;
     private boolean imKampf;
@@ -9,6 +10,7 @@ public class Charakter {
         this.gesundheit = gesundheit;
         this.level = level;
         this.imKampf = imKampf;
+        this.maxGesundheit = gesundheit;
     }
 
     public void bekommtSchaden(int schaden) {
