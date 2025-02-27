@@ -32,7 +32,7 @@ public class Krieger extends Charakter implements Angreifer{
     @Override
     public void bekommtSchaden(int schaden) {
         // ruestung == percentage of damagereduction
-        int schadensVerringerung = schaden * (ruestung / 100);
+        int schadensVerringerung = Math.round(schaden * ((float) ruestung / 100));
         super.bekommtSchaden(schaden - schadensVerringerung);
     }
 }
