@@ -30,4 +30,13 @@ public class Spaeher extends Charakter implements Angreifer{
     public void angreifen(Charakter gegner) {
         gegner.bekommtSchaden(this.beweglichkeit);
     }
+
+    @Override
+    public void bekommtSchaden(int schaden) {
+        // ausdauer == percentage of dodgechance
+        int dodgeDiceRoll = (int) (Math.random() * 100 + 1);
+        if (dodgeDiceRoll > ausdauer) {
+            super.bekommtSchaden(schaden);
+        }
+    }
 }
