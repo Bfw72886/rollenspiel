@@ -28,9 +28,9 @@ public class Spaeher extends Charakter implements Angreifer{
 
     @Override
     public void angreifen(Charakter gegner) {
-        // TODO attack-miss-chance
+        if (hasMissed()) {
 
-        if (!isCrit()) {
+        } else if (!isCrit()) {
             gegner.bekommtSchaden(this.beweglichkeit);
         } else {
             gegner.bekommtSchaden(this.beweglichkeit * 2);
@@ -45,6 +45,15 @@ public class Spaeher extends Charakter implements Angreifer{
         int critDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
         critDiceRoll = Math.round(critDiceRoll / 4.0f); // 0-25
         return critDiceRoll <= beweglichkeit;
+    }
+
+    /**
+     * chance to miss == 10%
+     * @return true if missChance was sufficient
+     */
+    private boolean hasMissed() {
+        int missDiceRoll = (int) (Math.random() * 100 + 1); // 1-100
+        return missDiceRoll <= 10;
     }
 
     @Override
