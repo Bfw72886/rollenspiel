@@ -15,8 +15,9 @@ public abstract class Charakter {
 
     public void bekommtSchaden(int schaden) {
         gesundheit -= schaden;
-        if (gesundheit < 0) {
+        if (gesundheit <= 0) {
             gesundheit = 0;
+            this.imKampf = false;
         }
     }
 
