@@ -20,8 +20,10 @@ public class Kampf {
             System.out.println("Gleichstand, beide Kämpfer sind tot.");
         } else if (kaempfer1.getGesundheit() == 0) {
             System.out.println(kaempfer2.getName() + " hat gewonnen!");
+            kaempfer2.setImKampf(false);
         } else {
             System.out.println(kaempfer1.getName() + " hat gewonnen!");
+            kaempfer1.setImKampf(false);
         }
     }
 
