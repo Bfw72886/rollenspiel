@@ -1,5 +1,5 @@
 public class ui {
-    private static String symbol = "~ ";
+    private static String symbol = "~ "; // to mark the fighters for better visibility
 
     public static void showKaempfers(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
