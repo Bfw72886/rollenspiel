@@ -33,6 +33,13 @@ public class Magier extends Charakter{
             gegner.bekommtSchaden(this.intelligenz);
             mana += 10;
         }
+    }
 
+    @Override
+    public String toString() {
+        String generalStats = super.toString();
+        return generalStats + "\n" +
+                "Intelligenz: " + intelligenz + "\n" +
+                "Mana: " + mana;
     }
 }

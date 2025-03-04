@@ -10,4 +10,11 @@ public class Monster extends Charakter{
     public void angreifen(Charakter gegner) {
         gegner.bekommtSchaden(angriffswert);
     }
+
+    @Override
+    public String toString() {
+        String generalStats = super.toString();
+        return generalStats + "\n" +
+                "Angriff: " + angriffswert;
+    }
 }

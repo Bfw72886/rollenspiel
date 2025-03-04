@@ -79,4 +79,12 @@ public class Spaeher extends Charakter{
     private int rollD100() {
         return (int) (Math.random() * 100 + 1);
     }
+
+    @Override
+    public String toString() {
+        String generalStats = super.toString();
+        return generalStats + "\n" +
+                "Beweglichkeit: " + beweglichkeit + "\n" +
+                "Ausdauer: " + ausdauer;
+    }
 }

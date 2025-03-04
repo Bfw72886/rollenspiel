@@ -35,4 +35,12 @@ public class Krieger extends Charakter{
         int schadensVerringerung = Math.round(schaden * ((float) ruestung / 100));
         super.bekommtSchaden(schaden - schadensVerringerung);
     }
+
+    @Override
+    public String toString() {
+        String generalStats = super.toString();
+        return generalStats + "\n" +
+                "Stärke: " + staerke + "\n" +
+                "Rüstung: " + ruestung;
+    }
 }

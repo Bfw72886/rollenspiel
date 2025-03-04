@@ -54,4 +54,9 @@ public abstract class Charakter {
     public void setImKampf(boolean imKampf) {
         this.imKampf = imKampf;
     }
+
+    @Override
+    public String toString() {
+        return  name + '\t' + gesundheit + " / " + maxGesundheit;
+    }
 }
