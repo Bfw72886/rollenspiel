@@ -11,6 +11,8 @@ public class Kampf {
         kaempfer1.setImKampf(true);
         kaempfer2.setImKampf(true);
 
+        ui.showKaempfers(kaempfer1, kaempfer2);
+
         while (kaempfer1.isImKampf() && kaempfer2.isImKampf()) {
             kaempfer1.angreifen(kaempfer2);
             kaempfer2.angreifen(kaempfer1);
