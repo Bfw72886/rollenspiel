@@ -9,9 +9,6 @@ import java.util.ArrayList;
 
 public class DBreader {
 
-    public DBreader() {
-    }
-
     public ArrayList<Monster> readMonsters(int difficulty) {
         Connection conn = connect();
         ArrayList<Monster> monsterFromDB = new ArrayList<>();
