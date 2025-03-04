@@ -1,11 +1,4 @@
-import java.util.ArrayList;
-
 public class Charakterersteller {
-    private DBreader dbreader;
-
-    public Charakterersteller() {
-        dbreader = new DBreader();
-    }
 
     public Krieger createKrieger() {
         return new Krieger("Keule", 100, 1, false, 20, 20);
