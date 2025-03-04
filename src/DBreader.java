@@ -4,19 +4,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DBreader {
-    ArrayList<Monster> monsters;
-
-    public ArrayList<Monster> getMonsters() {
-        return monsters;
-    }
 
     public DBreader() {
-        monsters = readMonsters(connect());
     }
 
-    private ArrayList<Monster> readMonsters(Connection conn) {
+    public ArrayList<Monster> readMonsters(int difficulty) {
+        Connection conn = connect();
         ArrayList<Monster> monsterFromDB = new ArrayList<>();
-        var sql = "SELECT * FROM Monster";
+        var sql = "SELECT * FROM Monster WHERE schwierigkeit = " + difficulty;
 
         try (var stmt = conn.createStatement();
              var rs = stmt.executeQuery(sql)) {
@@ -27,7 +22,8 @@ public class DBreader {
                         rs.getInt("gesundheit"),
                         rs.getInt("level"),
                         rs.getBoolean("imKampf"),
-                        rs.getInt("angriffsWert")
+                        rs.getInt("angriffsWert"),
+                        rs.getInt("schwierigkeit")
                 ));
             }
             conn.close();
