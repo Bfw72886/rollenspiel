@@ -14,15 +14,16 @@ public class Kampf {
         while (kaempfer1.isImKampf() && kaempfer2.isImKampf()) {
             kaempfer1.angreifen(kaempfer2);
             kaempfer2.angreifen(kaempfer1);
+            ui.showKaempfers(kaempfer1, kaempfer2);
         }
 
         if (kaempfer1.getGesundheit() == 0 && kaempfer2.getGesundheit() == 0) {
             System.out.println("Gleichstand, beide Kämpfer sind tot.");
         } else if (kaempfer1.getGesundheit() == 0) {
-            System.out.println(kaempfer2.getName() + " hat gewonnen!");
+            ui.showSieger(kaempfer2);
             kaempfer2.setImKampf(false);
         } else {
-            System.out.println(kaempfer1.getName() + " hat gewonnen!");
+            ui.showSieger(kaempfer1);
             kaempfer1.setImKampf(false);
         }
     }
