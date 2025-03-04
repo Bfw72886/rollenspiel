@@ -18,19 +18,18 @@ public class Dungeon {
     }
 
     public void start() {
-        for (int i = 0; i < 3; i++) {
-            new Kampf(character, getRandomMonster(monstersEasy)).start();
+        for (int i = 1; i <= 10; i++) {
+            ui.showKampf(i);
+            if (i < 4) {
+                new Kampf(character, getRandomMonster(monstersEasy)).start();
+            } else if (i < 8) {
+                new Kampf(character, getRandomMonster(monstersMedium)).start();
+            } else if (i < 10) {
+                new Kampf(character, getRandomMonster(monstersHard)).start();
+            } else {
+                new Kampf(character, getRandomMonster(bosses)).start();
+            }
         }
-
-        for (int i = 0; i < 3; i++) {
-            new Kampf(character, getRandomMonster(monstersMedium)).start();
-        }
-
-        for (int i = 0; i < 3; i++) {
-            new Kampf(character, getRandomMonster(monstersHard)).start();
-        }
-
-        new Kampf(character, getRandomMonster(bosses)).start();
     }
 
     private Monster getRandomMonster(ArrayList<Monster> monsters) {
