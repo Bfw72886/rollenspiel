@@ -38,8 +38,9 @@ public class Magier extends Charakter{
     @Override
     public String toString() {
         String generalStats = super.toString();
+        String specialStats = String.format("%-15s %d%n", "Intelligenz:", intelligenz) +
+                String.format("%-15s %d", "Mana:", mana);
         return generalStats + "\n" +
-                "Intelligenz: " + intelligenz + "\n" +
-                "Mana: " + mana;
+                specialStats;
     }
 }

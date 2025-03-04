@@ -39,8 +39,9 @@ public class Krieger extends Charakter{
     @Override
     public String toString() {
         String generalStats = super.toString();
+        String specialStats = String.format("%-15s %d%n", "Stärke:", staerke) +
+                String.format("%-15s %d", "Rüstung:", ruestung);
         return generalStats + "\n" +
-                "Stärke: " + staerke + "\n" +
-                "Rüstung: " + ruestung;
+                specialStats;
     }
 }

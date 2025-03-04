@@ -83,8 +83,9 @@ public class Spaeher extends Charakter{
     @Override
     public String toString() {
         String generalStats = super.toString();
+        String specialStats = String.format("%-15s %d%n", "Beweglichkeit:", beweglichkeit) +
+                String.format("%-15s %d", "Ausdauer:", ausdauer);
         return generalStats + "\n" +
-                "Beweglichkeit: " + beweglichkeit + "\n" +
-                "Ausdauer: " + ausdauer;
+                specialStats;
     }
 }

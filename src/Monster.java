@@ -14,7 +14,8 @@ public class Monster extends Charakter{
     @Override
     public String toString() {
         String generalStats = super.toString();
+        String specialStats = String.format("%-15s %d%n", "Angriff:", angriffswert);
         return generalStats + "\n" +
-                "Angriff: " + angriffswert;
+                specialStats;
     }
 }
