@@ -1,7 +1,7 @@
 public class Monster extends Charakter{
     private int angriffswert;
 
-    public Monster(String name, int gesundheit, int level, boolean imKampf, int angriffswert) {
+    public Monster(String name, int gesundheit, int level, boolean imKampf, int angriffswert, int schwierigkeit) {
         super(name, gesundheit, level, imKampf);
         this.angriffswert = angriffswert;
     }
