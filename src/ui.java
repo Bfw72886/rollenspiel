@@ -1,10 +1,15 @@
 public class ui {
-    private static String symbol = "~ "; // to mark the fighters for better visibility
+
+    public static void showKaempfersDetailed(Charakter kaempfer1, Charakter kaempfer2) {
+        System.out.println(
+                kaempfer1 + "\n" +
+                kaempfer2 + "\n");
+    }
 
     public static void showKaempfers(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
-                symbol + kaempfer1 + "\n" +
-                symbol + kaempfer2 + "\n");
+                kaempfer1.getNameAndGesundheit() + "\n" +
+                kaempfer2.getNameAndGesundheit() + "\n");
     }
 
     public static void showKampf(int kampfNum) {

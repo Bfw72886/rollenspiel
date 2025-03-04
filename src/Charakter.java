@@ -55,8 +55,12 @@ public abstract class Charakter {
         this.imKampf = imKampf;
     }
 
+    public String getNameAndGesundheit() {
+        return String.format("%-15s %d / %d", name, gesundheit, maxGesundheit);
+    }
+
     @Override
     public String toString() {
-        return  name + '\t' + gesundheit + " / " + maxGesundheit;
+        return String.format("%-15s %d / %d", name, gesundheit, maxGesundheit);
     }
 }
