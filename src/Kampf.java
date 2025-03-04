@@ -19,9 +19,9 @@ public class Kampf {
         if (kaempfer1.getGesundheit() == 0 && kaempfer2.getGesundheit() == 0) {
             System.out.println("Gleichstand, beide Kämpfer sind tot.");
         } else if (kaempfer1.getGesundheit() == 0) {
-            System.out.println(kaempfer1.getName() + " hat gewonnen!");
-        } else {
             System.out.println(kaempfer2.getName() + " hat gewonnen!");
+        } else {
+            System.out.println(kaempfer1.getName() + " hat gewonnen!");
         }
     }
 
