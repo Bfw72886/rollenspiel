@@ -1,9 +1,13 @@
+package userinterface;
+
+import charakters.Charakter;
+
 public class ui {
 
     public static void showKaempfersDetailed(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
                 kaempfer1 + "\n" +
-                kaempfer2 + "\n");
+                kaempfer2);
     }
 
     public static void showKaempfers(Charakter kaempfer1, Charakter kaempfer2) {

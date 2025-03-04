@@ -1,3 +1,9 @@
+package logic;
+
+import charakters.Charakter;
+import charakters.Monster;
+import userinterface.ui;
+
 import java.util.ArrayList;
 
 public class Dungeon {

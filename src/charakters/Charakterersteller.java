@@ -1,3 +1,5 @@
+package charakters;
+
 public class Charakterersteller {
 
     public Krieger createKrieger() {

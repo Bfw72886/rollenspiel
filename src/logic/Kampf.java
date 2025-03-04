@@ -1,3 +1,8 @@
+package logic;
+
+import charakters.Charakter;
+import userinterface.ui;
+
 public class Kampf {
     private Charakter kaempfer1;
     private Charakter kaempfer2;

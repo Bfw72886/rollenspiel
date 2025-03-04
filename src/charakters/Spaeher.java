@@ -1,3 +1,5 @@
+package charakters;
+
 public class Spaeher extends Charakter{
 
     private int beweglichkeit;

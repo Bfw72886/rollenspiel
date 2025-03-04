@@ -1,6 +1,8 @@
+package charakters;
+
 public abstract class Charakter {
     private String name;
-    private final int maxGesundheit;
+    private int maxGesundheit;
     private int gesundheit;
     private int level;
     private boolean imKampf;

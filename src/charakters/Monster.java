@@ -1,3 +1,5 @@
+package charakters;
+
 public class Monster extends Charakter{
     private int angriffswert;
 

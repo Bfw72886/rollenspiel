@@ -1,3 +1,5 @@
+package charakters;
+
 public class Krieger extends Charakter{
     private int staerke;
     private int ruestung;
