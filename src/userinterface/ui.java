@@ -1,6 +1,7 @@
 package userinterface;
 
-import charakters.Charakter;
+import charakters.*;
+
 
 public class ui {
 
@@ -25,5 +26,28 @@ public class ui {
 
     public static void showSieger(Charakter sieger) {
         System.out.println(sieger.getName() + " hat gewonnen!\n");
+    }
+
+    public static void heilEvent(Charakter charakter) {
+        System.out.println(charakter + " nimmt ein Schluck aus dem Heilbrunnen.\n"
+                + charakter + " hat wieder volle Gesundheit.");
+    }
+
+    public static void itemEventKrieger(Krieger krieger, int zusatzRuestung) {
+        System.out.println(krieger.getName() + " findet einen Helm.\n"
+                + krieger.getName() + " setzt ihn auf den bereits vorhandenen Helm und erhält "
+                + zusatzRuestung + " Rüstung!");
+    }
+
+    public static void itemEventMagier(Magier magier, int zusatzMana) {
+        System.out.println(magier.getName() + " findet einen Manatrank.\n"
+                + magier.getName() + " trinkt ihn aus und erhält "
+                + zusatzMana + " Mana!");
+    }
+
+    public static void itemEventSpaeher(Spaeher spaeher, int zusatzBeweglichkeit) {
+        System.out.println(spaeher.getName() + " findet ein Fläschchen Öl.\n"
+                + spaeher.getName() + " reibt sich damit ein und erhält "
+                + zusatzBeweglichkeit + " Beweglichkeit!");
     }
 }
