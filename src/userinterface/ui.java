@@ -29,7 +29,7 @@ public class ui {
     }
 
     public static void heilEvent(Charakter charakter) {
-        System.out.println(charakter + " nimmt ein Schluck aus dem Heilbrunnen.\n"
+        System.out.println(charakter.getName() + " nimmt ein Schluck aus dem Heilbrunnen.\n"
                 + charakter + " hat wieder volle Gesundheit.");
     }
 
