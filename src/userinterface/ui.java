@@ -72,4 +72,12 @@ public class ui {
     public static void enterAufforderung() {
         System.out.println("<Enter> zum Fortfahren");
     }
+
+    public static void dungeonVerloren(Charakter charakter) {
+        System.out.println(charakter.getName() + " wurde getötet.");
+    }
+
+    public static void dungeonGewonnen(Charakter charakter) {
+        System.out.println(charakter.getName() + " hat den Dungeon abgeschlossen. Glückwunsch!");
+    }
 }

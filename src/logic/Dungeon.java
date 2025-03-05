@@ -37,8 +37,17 @@ public class Dungeon {
                 new Kampf(character, getRandomMonster(bosses)).start();
             }
             zwischenStopp();
+            if (character.getGesundheit() == 0) {
+                break;
+            }
             new Belohnung(character).start();
             zwischenStopp();
+        }
+
+        if (character.getGesundheit() == 0) {
+            ui.dungeonVerloren(character);
+        } else {
+            ui.dungeonGewonnen(character);
         }
     }
 
