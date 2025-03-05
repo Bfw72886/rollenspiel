@@ -50,4 +50,14 @@ public class ui {
                 + spaeher.getName() + " reibt sich damit ein und erhält "
                 + zusatzBeweglichkeit + " Beweglichkeit!");
     }
+
+    public static void belohnungsAuswahl() {
+        System.out.println(
+                """
+                        Wähle deine Belohnung:
+                        [j] Heilbrunnen
+                        [k] Gegenstandsgrube
+                        <Enter> zum Bestätigen"""
+        );
+    }
 }
