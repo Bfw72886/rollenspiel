@@ -28,6 +28,10 @@ public class ui {
         System.out.println(sieger.getName() + " hat gewonnen!\n");
     }
 
+    public static void showSiegerGleichstand() {
+        System.out.println("Beide Kämpfer haben verloren.");
+    }
+
     public static void heilEvent(Charakter charakter) {
         System.out.println(charakter.getName() + " nimmt ein Schluck aus dem Heilbrunnen.\n"
                 + charakter + " hat wieder volle Gesundheit.");

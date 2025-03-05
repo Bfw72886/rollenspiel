@@ -25,7 +25,7 @@ public class Kampf {
         }
 
         if (kaempfer1.getGesundheit() == 0 && kaempfer2.getGesundheit() == 0) {
-            System.out.println("Gleichstand, beide Kämpfer sind tot.");
+            ui.showSiegerGleichstand();
         } else if (kaempfer1.getGesundheit() == 0) {
             ui.showSieger(kaempfer2);
             kaempfer2.setImKampf(false);
