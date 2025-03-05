@@ -34,7 +34,7 @@ public class ui {
 
     public static void heilEvent(Charakter charakter) {
         System.out.println(charakter.getName() + " nimmt ein Schluck aus dem Heilbrunnen.\n"
-                + charakter + " hat wieder volle Gesundheit.");
+                + charakter.getName() + " hat wieder volle Gesundheit.");
     }
 
     public static void itemEventKrieger(Krieger krieger, int zusatzRuestung) {
