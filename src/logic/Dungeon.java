@@ -5,6 +5,7 @@ import charakters.Monster;
 import userinterface.ui;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Dungeon {
     DBreader dbreader;
@@ -35,11 +36,19 @@ public class Dungeon {
             } else {
                 new Kampf(character, getRandomMonster(bosses)).start();
             }
+            zwischenStopp();
+            new Belohnung(character).start();
+            zwischenStopp();
         }
     }
 
     private Monster getRandomMonster(ArrayList<Monster> monsters) {
         int randomIndex = (int) (Math.random() * monsters.size());
         return monsters.get(randomIndex);
+    }
+
+    private void zwischenStopp() {
+        ui.enterAufforderung();
+        new Scanner(System.in).nextLine();
     }
 }
