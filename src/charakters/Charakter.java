@@ -65,4 +65,8 @@ public abstract class Charakter {
     public String toString() {
         return String.format("%-15s %d / %d", name, gesundheit, maxGesundheit);
     }
+
+    public int getMaxGesundheit() {
+        return maxGesundheit;
+    }
 }
