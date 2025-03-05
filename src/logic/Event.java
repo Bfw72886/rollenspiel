@@ -6,6 +6,10 @@ import userinterface.ui;
 public class Event {
     Charakter charakter;
 
+    public Event(Charakter charakter) {
+        this.charakter = charakter;
+    }
+
     public void heilung() {
         charakter.setGesundheit(charakter.getMaxGesundheit());
         ui.heilEvent(charakter);
