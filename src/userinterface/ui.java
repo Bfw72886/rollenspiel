@@ -60,4 +60,12 @@ public class ui {
                         <Enter> zum Bestätigen"""
         );
     }
+
+    public static void eingabeAufforderung() {
+        System.out.print("> ");
+    }
+
+    public static void enterAufforderung() {
+        System.out.println("<Enter> zum Fortfahren");
+    }
 }
