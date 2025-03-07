@@ -6,6 +6,8 @@ public abstract class Charakter {
     private int gesundheit;
     private int level;
     private boolean imKampf;
+    private int expNeededForLevelup;
+    private int currentExp;
 
     public Charakter(String name, int gesundheit, int level, boolean imKampf) {
         this.name = name;
@@ -13,6 +15,8 @@ public abstract class Charakter {
         this.level = level;
         this.imKampf = imKampf;
         this.maxGesundheit = gesundheit;
+        this.expNeededForLevelup = 100;
+        this.currentExp = 0;
     }
 
     public void bekommtSchaden(int schaden) {
@@ -68,5 +72,23 @@ public abstract class Charakter {
 
     public int getMaxGesundheit() {
         return maxGesundheit;
+    }
+
+    public void gainExp(int gainedExp) {
+        currentExp += gainedExp;
+        if (currentExp >= expNeededForLevelup) {
+            levelUp();
+        }
+    }
+
+    private void levelUp() {
+        currentExp -= expNeededForLevelup;
+        expNeededForLevelup += 50;
+        level += 1;
+
+        // 10% more health on levelup
+        int healthRaise = Math.round((float) (maxGesundheit * 0.1));
+        maxGesundheit += healthRaise;
+        gesundheit += healthRaise;
     }
 }
