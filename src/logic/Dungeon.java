@@ -24,6 +24,9 @@ public class Dungeon {
         this.character = character;
     }
 
+    /**
+     * dungeon has 10 rooms with Monsters that get harder progressively
+     */
     public void start() {
         for (int i = 1; i <= 10; i++) {
             ui.showKampf(i);

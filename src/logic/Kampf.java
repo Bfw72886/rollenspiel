@@ -12,6 +12,9 @@ public class Kampf {
         this.kaempfer2 = kaempfer2;
     }
 
+    /**
+     * Both kaempfers battle until the first one has no gesundheit
+     */
     public void start() {
         kaempfer1.setImKampf(true);
         kaempfer2.setImKampf(true);

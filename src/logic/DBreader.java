@@ -9,6 +9,11 @@ import java.util.ArrayList;
 
 public class DBreader {
 
+    /**
+     *
+     * @param difficulty 1-4
+     * @return Arraylist of monsters of specified difficulty
+     */
     public ArrayList<Monster> readMonsters(int difficulty) {
         Connection conn = connect();
         ArrayList<Monster> monsterFromDB = new ArrayList<>();
@@ -35,6 +40,10 @@ public class DBreader {
         return monsterFromDB;
     }
 
+    /**
+     *
+     * @return Connection to be used in other database-methods
+     */
     private Connection connect() {
         var url = "jdbc:sqlite:rollenspieldb.db";
 

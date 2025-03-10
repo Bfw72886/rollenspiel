@@ -14,6 +14,10 @@ public class Belohnung {
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * lets User choose between events
+     * @see Event
+     */
     public void start() {
         ui.belohnungsAuswahl();
         boolean inputValid = false;

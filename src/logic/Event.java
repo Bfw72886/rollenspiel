@@ -15,6 +15,9 @@ public class Event {
         ui.heilEvent(charakter);
     }
 
+    /**
+     * Gives reward specific to class of Charakter
+     */
     public void items() {
         String klasse = charakter.getClass().getSimpleName();
         switch (klasse) {
