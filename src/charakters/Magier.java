@@ -1,5 +1,9 @@
 package charakters;
 
+/**
+ * The mage casts a spell, whenever mana is ready!
+ * Casting spells does more damage and buffs the intelligence.
+ */
 public class Magier extends Charakter{
     private int intelligenz;
     private int mana;

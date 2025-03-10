@@ -1,5 +1,9 @@
 package charakters;
 
+/**
+ * The warrior is all about defense!
+ * The more armor, the less damage taken.
+ */
 public class Krieger extends Charakter{
     private int staerke;
     private int ruestung;

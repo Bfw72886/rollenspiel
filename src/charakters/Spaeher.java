@@ -1,5 +1,9 @@
 package charakters;
 
+/**
+ * The scout loves to gamble his way to the victory!
+ * On every attack and defense randomness decides the outcome.
+ */
 public class Spaeher extends Charakter{
 
     private int beweglichkeit;
