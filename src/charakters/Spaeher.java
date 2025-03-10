@@ -5,7 +5,6 @@ public class Spaeher extends Charakter{
     private int beweglichkeit;
     private int ausdauer;
 
-
     public Spaeher(String name, int gesundheit, int level, boolean imKampf, int beweglichkeit, int ausdauer) {
         super(name, gesundheit, level, imKampf);
         this.beweglichkeit = beweglichkeit;
@@ -28,6 +27,12 @@ public class Spaeher extends Charakter{
         this.ausdauer = ausdauer;
     }
 
+    /**
+     * Has chance to miss, to crit and to normally hit
+     * @see Spaeher#hasMissed()
+     * @see Spaeher#isCrit()
+     * @param gegner
+     */
     @Override
     public void angreifen(Charakter gegner) {
         if (hasMissed()) {
@@ -37,6 +42,15 @@ public class Spaeher extends Charakter{
         } else {
             gegner.bekommtSchaden(this.beweglichkeit * 2);
         }
+    }
+
+    /**
+     * chance to miss == 10%
+     * @return true if missChance was sufficient
+     */
+    private boolean hasMissed() {
+        int missDiceRoll = rollD100();
+        return missDiceRoll <= 10;
     }
 
     /**
@@ -50,14 +64,10 @@ public class Spaeher extends Charakter{
     }
 
     /**
-     * chance to miss == 10%
-     * @return true if missChance was sufficient
+     * Has chance to dodge
+     * @see Spaeher#hasDodged()
+     * @param schaden
      */
-    private boolean hasMissed() {
-        int missDiceRoll = rollD100();
-        return missDiceRoll <= 10;
-    }
-
     @Override
     public void bekommtSchaden(int schaden) {
         if (!hasDodged()) {

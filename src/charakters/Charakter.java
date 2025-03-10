@@ -21,6 +21,11 @@ public abstract class Charakter {
         this.currentExp = 0;
     }
 
+    /**
+     * Is used in angreifen(), don't use separately unless there's a good reason
+     * @see Charakter#angreifen(Charakter)
+     * @param schaden
+     */
     public void bekommtSchaden(int schaden) {
         gesundheit -= schaden;
         if (gesundheit <= 0) {
@@ -29,6 +34,11 @@ public abstract class Charakter {
         }
     }
 
+    /**
+     * Use in conjuction with bekommtSchaden(), specific implementation for every child
+     * @see Charakter#bekommtSchaden(int)
+     * @param gegner
+     */
     public abstract void angreifen(Charakter gegner);
 
     public String getName() {
@@ -63,10 +73,18 @@ public abstract class Charakter {
         this.imKampf = imKampf;
     }
 
+    /**
+     * Not a regular getter
+     * @return formatted String to use in ui
+     */
     public String getNameAndGesundheit() {
         return String.format("%-15s %d / %d", name, gesundheit, maxGesundheit);
     }
 
+    /**
+     * To be added to in childs
+     * @return formatted String to use in ui
+     */
     @Override
     public String toString() {
         return String.format("%-15s %d / %d", name, gesundheit, maxGesundheit);
@@ -76,6 +94,11 @@ public abstract class Charakter {
         return maxGesundheit;
     }
 
+    /**
+     * Exp can be added until Levelup, then levelUp() is called
+     * @see Charakter#levelUp()
+     * @param gainedExp
+     */
     public void gainExp(int gainedExp) {
         currentExp += gainedExp;
         if (currentExp >= expNeededForLevelup) {
@@ -83,6 +106,10 @@ public abstract class Charakter {
         }
     }
 
+    /**
+     * Exp needed for levelup gets higher after each level
+     * Raises gesundheit and maxGesundheit
+     */
     private void levelUp() {
         currentExp -= expNeededForLevelup;
         expNeededForLevelup += 50;

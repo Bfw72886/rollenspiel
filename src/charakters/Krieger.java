@@ -31,9 +31,12 @@ public class Krieger extends Charakter{
         gegner.bekommtSchaden(this.staerke);
     }
 
+    /**
+     * ruestung == percentage of damagereduction
+     * @param schaden
+     */
     @Override
     public void bekommtSchaden(int schaden) {
-        // ruestung == percentage of damagereduction
         int schadensVerringerung = Math.round(schaden * ((float) ruestung / 100));
         super.bekommtSchaden(schaden - schadensVerringerung);
     }

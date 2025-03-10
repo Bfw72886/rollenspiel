@@ -26,6 +26,10 @@ public class Magier extends Charakter{
         this.intelligenz = intelligenz;
     }
 
+    /**
+     * When mana is enough, attack with 1.5x damage, otherwise for 1x and regenerate mana
+     * @param gegner
+     */
     @Override
     public void angreifen(Charakter gegner) {
         if (this.mana > 40) {
