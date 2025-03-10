@@ -5,12 +5,22 @@ import charakters.*;
 
 public class ui {
 
+    /**
+     * Shows every stat of kaempfers (their toString()-method), use sparingly
+     * @param kaempfer1
+     * @param kaempfer2
+     */
     public static void showKaempfersDetailed(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
                 kaempfer1 + "\n" +
                 kaempfer2);
     }
 
+    /**
+     * Shows name and gesundheit of both kaempfers
+     * @param kaempfer1
+     * @param kaempfer2
+     */
     public static void showKaempfers(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
                 kaempfer1.getNameAndGesundheit() + "\n" +
@@ -25,7 +35,7 @@ public class ui {
     }
 
     public static void showSieger(Charakter sieger) {
-        System.out.println(sieger.getName() + " hat gewonnen!\n");
+        System.out.println(sieger.getName() + " hat gewonnen!");
     }
 
     public static void showSiegerGleichstand() {
