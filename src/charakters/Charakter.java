@@ -1,5 +1,7 @@
 package charakters;
 
+import userinterface.ui;
+
 public abstract class Charakter {
     private String name;
     private int maxGesundheit;
@@ -90,5 +92,6 @@ public abstract class Charakter {
         int healthRaise = Math.round((float) (maxGesundheit * 0.1));
         maxGesundheit += healthRaise;
         gesundheit += healthRaise;
+        ui.levelUp(this, level, healthRaise);
     }
 }

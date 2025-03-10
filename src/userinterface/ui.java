@@ -80,4 +80,9 @@ public class ui {
     public static void dungeonGewonnen(Charakter charakter) {
         System.out.println(charakter.getName() + " hat den Dungeon abgeschlossen. Glückwunsch!");
     }
+
+    public static void levelUp(Charakter charakter, int newLevel, int healthRaise) {
+        System.out.println(charakter.getName() + " hat Level " + newLevel + " erreicht!");
+        System.out.println(charakter.getName() + "s Gesundheit ist um " + healthRaise + " gestiegen.");
+    }
 }
