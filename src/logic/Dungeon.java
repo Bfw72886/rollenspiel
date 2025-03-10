@@ -35,6 +35,8 @@ public class Dungeon {
                 new Kampf(character, getRandomMonster(monstersHard)).start();
             } else {
                 new Kampf(character, getRandomMonster(bosses)).start();
+                zwischenStopp();
+                break;
             }
             zwischenStopp();
             if (character.getGesundheit() == 0) {
