@@ -78,7 +78,15 @@ public class ui {
     }
 
     public static void dungeonGewonnen(Charakter charakter) {
-        System.out.println(charakter.getName() + " hat den Dungeon abgeschlossen. Glückwunsch!");
+        System.out.printf("""
+                {\\     /}
+                 >`.()'<        Fee Evangelyne:
+                {@ /|\\/@}       %s hat den Dungeon abgeschlossen!
+                 `/'|`~'        Glückwunsch!!!
+                    \\\\
+                    //
+                   ''
+                   """, charakter.getName());
     }
 
     public static void levelUp(Charakter charakter, int newLevel, int healthRaise) {
