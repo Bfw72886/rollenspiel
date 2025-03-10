@@ -40,6 +40,8 @@ public class Dungeon {
             if (character.getGesundheit() == 0) {
                 break;
             }
+            // 50 exp means that character gains level-up after 2 then 3 then 4 [and so on] fights
+            character.gainExp(50);
             new Belohnung(character).start();
             zwischenStopp();
         }
