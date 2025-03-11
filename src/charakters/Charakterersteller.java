@@ -36,7 +36,7 @@ public class Charakterersteller {
         return switch (selection) {
             case "j" -> new Krieger(name, 100, 1, false, 20, 20);
             case "k" -> new Magier(name, 100, 1, false, 20, 50);
-            case "l" -> new Spaeher(name, 100, 1, false, 20, 50);
+            case "l" -> new Spaeher(name, 100, 1, false, 20, 20);
             default -> {
                 System.out.println("Something went wrong in the Charakter-selection.");
                 yield null;
@@ -54,6 +54,6 @@ public class Charakterersteller {
     }
 
     public Spaeher createSpaeher() {
-        return new Spaeher("Augä", 100, 1, false, 20, 50);
+        return new Spaeher("Augä", 100, 1, false, 20, 20);
     }
 }

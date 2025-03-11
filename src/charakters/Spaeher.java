@@ -49,12 +49,12 @@ public class Spaeher extends Charakter{
     }
 
     /**
-     * chance to miss == 10%
+     * chance to miss == 33%
      * @return true if missChance was sufficient
      */
     private boolean hasMissed() {
         int missDiceRoll = rollD100();
-        return missDiceRoll <= 10;
+        return missDiceRoll <= 33;
     }
 
     /**
