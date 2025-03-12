@@ -45,6 +45,12 @@ public class Event {
         }
     }
 
+    /**
+     * NOT INTEGRATED YET
+     * Charakter either has enough {@code percentageHealthNeededForSacrifice} and pays or not
+     * @see Event#devilDealGranted()
+     * @see Event#devilDealRefused()
+     */
     public void devilDealTry() {
         int percentageHealthNeededForSacrifice = 20;
         int healthSacrifice = Math.round(charakter.getMaxGesundheit() * (percentageHealthNeededForSacrifice / 100f));
