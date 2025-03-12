@@ -14,6 +14,6 @@ public class Main {
          */
         Charakterersteller charakterersteller = new Charakterersteller();
         Charakter deinCharakter = charakterersteller.createYourCharakter();
-        new Dungeon(deinCharakter);
+        new Dungeon(deinCharakter).start();
     }
 }
