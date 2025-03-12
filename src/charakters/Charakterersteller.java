@@ -27,6 +27,7 @@ public class Charakterersteller {
                             [l] Späher
                             <Enter> zum Bestätigen"""
             );
+            ui.eingabeAufforderung();
             selection = scanner.nextLine();
             if (selection.equals("j") | selection.equals("k") | selection.equals("l")) {
                 selectionValid = true;
