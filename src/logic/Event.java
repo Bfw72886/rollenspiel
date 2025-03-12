@@ -58,12 +58,12 @@ public class Event {
         }
     }
 
-    public void devilDealGranted() {
+    private void devilDealGranted() {
         ui.devilDealGranted();
         // TODO Randomness for 3 events, 2 positive, 1 neutral
     }
 
-    public void devilDealRefused() {
+    private void devilDealRefused() {
         ui.devilDealRefused();
         // TODO Randomness for 3 events, 1 positive, 2 negative
     }
