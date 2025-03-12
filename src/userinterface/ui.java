@@ -103,4 +103,20 @@ public class ui {
         System.out.println(charakter.getName() + " hat Level " + newLevel + " erreicht!");
         System.out.println(charakter.getName() + "s Gesundheit ist um " + healthRaise + " gestiegen.");
     }
+
+    public static void devilDealGranted() {
+        System.out.println("""
+                Dämon Mephisto: Oh, eine verlorene Seele!
+                                Lass mich dir etwas helfen...
+                                Natürlich zu dem Preis deiner Leben.
+                """);
+    }
+
+    public static void devilDealRefused() {
+        System.out.println("""
+                Dämon Diavolo:  DU VERDAMMTER NARR!
+                                OHNE EIN OPFER HIER AUFZUKREUZEN...
+                                NUTZLOS NUTZLOS NUTZLOS!!!
+                """);
+    }
 }

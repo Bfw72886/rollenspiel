@@ -44,4 +44,27 @@ public class Event {
                 break;
         }
     }
+
+    public void devilDealTry() {
+        int percentageHealthNeededForSacrifice = 20;
+        int healthSacrifice = Math.round(charakter.getMaxGesundheit() * (percentageHealthNeededForSacrifice / 100f));
+        boolean hasEnoughHealth = charakter.getGesundheit() > healthSacrifice;
+
+        if (hasEnoughHealth) {
+            charakter.setGesundheit(charakter.getGesundheit() - healthSacrifice);
+            devilDealGranted();
+        } else {
+            devilDealRefused();
+        }
+    }
+
+    public void devilDealGranted() {
+        ui.devilDealGranted();
+        // TODO Randomness for 3 events, 2 positive, 1 neutral
+    }
+
+    public void devilDealRefused() {
+        ui.devilDealRefused();
+        // TODO Randomness for 3 events, 1 positive, 2 negative
+    }
 }
