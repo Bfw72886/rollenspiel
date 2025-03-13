@@ -2,7 +2,6 @@ package userinterface;
 
 import charakters.*;
 
-
 public abstract class ui {
 
     /**
@@ -13,7 +12,7 @@ public abstract class ui {
     public static void showKaempfersDetailed(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
                 kaempfer1 + "\n" +
-                kaempfer2);
+                        kaempfer2);
     }
 
     /**
@@ -24,7 +23,7 @@ public abstract class ui {
     public static void showKaempfers(Charakter kaempfer1, Charakter kaempfer2) {
         System.out.println(
                 kaempfer1.getNameAndGesundheit() + "\n" +
-                kaempfer2.getNameAndGesundheit() + "\n");
+                        kaempfer2.getNameAndGesundheit() + "\n");
     }
 
     public static void showKampf(int kampfNum) {
@@ -148,6 +147,22 @@ public abstract class ui {
                 """);
     }
 
+    public static void devilDealRefusedMaxHealthLoss() {
+        System.out.println("""
+                Dämon Diavolo:  DU SIEHST LECKER AUS!
+                                *KRKCH*
+                                NUN RENN BEVOR ICH MEHR HUNGER BEKOMME!!
+                """);
+    }
+
+    public static void devilDealRefusedOneHealth() {
+        System.out.println("""
+                Dämon Diavolo:  DU MADE WIRST BÜßEN SO UNVERSCHÄMT ZU SEIN!
+                                ICH WERDE MIT GENUSS DABEI ZUSCHAUEN
+                                WIE DU IM NÄCHSTEN KAMPF STIRBST!!!
+                """);
+    }
+
     public static void devilDealRefusedHeal() {
         System.out.println("""
                 Dämon Diavolo:  MICH ERHEITERT DEINE NAIVITÄT!
@@ -156,3 +171,4 @@ public abstract class ui {
                 """);
     }
 }
+

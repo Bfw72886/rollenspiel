@@ -46,7 +46,6 @@ public class Event {
     }
 
     /**
-     * NOT INTEGRATED YET
      * Charakter either has enough {@code percentageHealthNeededForSacrifice} and pays or not
      * @see Event#devilDealGranted()
      * @see Event#devilDealRefused()
@@ -110,15 +109,25 @@ public class Event {
         }
     }
 
+    /**
+     * 1 of 3 events randomly possible
+     * 2 negative, 1 positive
+     * @see Event#devilDealTry()
+     */
     private void devilDealRefused() {
         ui.devilDealRefused();
-        // TODO Randomness for 3 events, 1 positive, 2 negative
         int devilsChoice = rollD3();
 
         switch (devilsChoice) {
             case 1:
+                ui.devilDealRefusedMaxHealthLoss();
+                int percentageOfMaxHealthLoss = 20;
+                int maxHealthLoss = Math.round(charakter.getMaxGesundheit() * (percentageOfMaxHealthLoss / 100f));
+                charakter.setMaxGesundheit(charakter.getMaxGesundheit() - maxHealthLoss);
                 break;
             case 2:
+                ui.devilDealRefusedOneHealth();
+                charakter.setGesundheit(1);
                 break;
             case 3:
                 ui.devilDealRefusedHeal();
