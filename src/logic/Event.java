@@ -64,9 +64,13 @@ public class Event {
         }
     }
 
+    /**
+     * 1 of 3 events randomly possible
+     * 2 positive, 1 negative
+     * @see Event#devilDealTry()
+     */
     private void devilDealGranted() {
         ui.devilDealGranted();
-        // TODO Randomness for 3 events, 2 positive, 1 neutral
         int devilsChoice = rollD3();
 
         switch (devilsChoice) {
