@@ -121,4 +121,8 @@ public abstract class Charakter {
         gesundheit += healthRaise;
         ui.levelUp(this, level, healthRaise);
     }
+
+    public void setMaxGesundheit(int maxGesundheit) {
+        this.maxGesundheit = maxGesundheit;
+    }
 }
