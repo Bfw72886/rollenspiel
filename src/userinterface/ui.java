@@ -131,4 +131,12 @@ public abstract class ui {
                                 deine Lebenskraft. Nun weiche von mir.
                 """);
     }
+
+    public static void devilDealGrantedStat() {
+        System.out.println("""
+                Dämon Mephisto: Risiko soll belohnt werden!
+                                Ich mache dich stärker.
+                                Nun enttäusche mich nicht und schreite voran.
+                """);
+    }
 }

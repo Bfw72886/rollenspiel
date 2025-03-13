@@ -78,6 +78,25 @@ public class Event {
                 charakter.setGesundheit(charakter.getMaxGesundheit());
                 break;
             case 2:
+                ui.devilDealGrantedStat();
+                String charakterKlasse = charakter.getClass().getSimpleName();
+                int statBuff = 10;
+                switch (charakterKlasse) {
+                    case "Krieger":
+                        Krieger krieger = (Krieger) charakter;
+                        krieger.setStaerke(krieger.getStaerke() + statBuff);
+                        break;
+                    case "Magier":
+                        Magier magier = (Magier) charakter;
+                        magier.setIntelligenz(magier.getIntelligenz() + statBuff);
+                        break;
+                    case "Spaeher":
+                        Spaeher spaeher = (Spaeher) charakter;
+                        spaeher.setBeweglichkeit(spaeher.getBeweglichkeit() + statBuff);
+                        break;
+                    default:
+                        ui.ownError("devilDealGranted Case 2");
+                }
                 break;
             case 3:
                 break;
