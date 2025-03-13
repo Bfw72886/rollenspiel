@@ -3,7 +3,7 @@ package userinterface;
 import charakters.*;
 
 
-public class ui {
+public abstract class ui {
 
     /**
      * Shows every stat of kaempfers (their toString()-method), use sparingly
