@@ -40,7 +40,7 @@ public class Event {
                 ui.itemEventSpaeher(spaeher, zusatzBeweglichkeit);
                 break;
             default:
-                System.out.println("Klasse nicht gefunden.");
+                ui.ownError("items");
                 break;
         }
     }
@@ -77,7 +77,7 @@ public class Event {
             case 3:
                 break;
             default:
-                System.out.println("Something went wrong in the devilDealGranted method.");
+                ui.ownError("devilDealGranted");
         }
     }
 
@@ -94,7 +94,7 @@ public class Event {
             case 3:
                 break;
             default:
-                System.out.println("Something went wrong in the devilDealRefused method.");
+                ui.ownError("devilDealRefused");
         }
     }
 

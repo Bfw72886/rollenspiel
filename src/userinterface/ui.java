@@ -119,4 +119,8 @@ public class ui {
                                 NUTZLOS NUTZLOS NUTZLOS!!!
                 """);
     }
+
+    public static void ownError(String inWhichMethod) {
+        System.out.println("Something went wrong in the " + inWhichMethod + " method.");
+    }
 }
