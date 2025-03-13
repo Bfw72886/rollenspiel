@@ -123,4 +123,12 @@ public abstract class ui {
     public static void ownError(String inWhichMethod) {
         System.out.println("Something went wrong in the " + inWhichMethod + " method.");
     }
+
+    public static void devilDealGrantedHealth() {
+        System.out.println("""
+                Dämon Mephisto: Ich habe mich entschieden deinen Mut zu belohnen.
+                                Ich mache dich widerstandsfähiger und regeneriere
+                                deine Lebenskraft. Nun weiche von mir.
+                """);
+    }
 }

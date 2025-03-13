@@ -71,6 +71,11 @@ public class Event {
 
         switch (devilsChoice) {
             case 1:
+                ui.devilDealGrantedHealth();
+                int percentageMaxHealthIncrease = 20;
+                int maxHealthIncrease = Math.round(charakter.getMaxGesundheit() * (percentageMaxHealthIncrease / 100f));
+                charakter.setMaxGesundheit(charakter.getMaxGesundheit() + maxHealthIncrease);
+                charakter.setGesundheit(charakter.getMaxGesundheit());
                 break;
             case 2:
                 break;
