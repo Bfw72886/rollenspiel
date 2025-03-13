@@ -121,6 +121,8 @@ public class Event {
             case 2:
                 break;
             case 3:
+                ui.devilDealRefusedHeal();
+                charakter.setGesundheit(charakter.getMaxGesundheit());
                 break;
             default:
                 ui.ownError("devilDealRefused");

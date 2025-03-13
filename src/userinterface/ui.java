@@ -147,4 +147,12 @@ public abstract class ui {
                                 Du dachtest doch nicht wirklich, dass ich fair bin.
                 """);
     }
+
+    public static void devilDealRefusedHeal() {
+        System.out.println("""
+                Dämon Diavolo:  MICH ERHEITERT DEINE NAIVITÄT!
+                                ICH FLICKE DICH WIEDER ZUSAMMEN!
+                                NUN GEH UND VERSUCHE DEIN GLÜCK *HAHAHA*
+                """);
+    }
 }
