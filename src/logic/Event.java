@@ -67,10 +67,38 @@ public class Event {
     private void devilDealGranted() {
         ui.devilDealGranted();
         // TODO Randomness for 3 events, 2 positive, 1 neutral
+        int devilsChoice = rollD3();
+
+        switch (devilsChoice) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                System.out.println("Something went wrong in the devilDealGranted method.");
+        }
     }
 
     private void devilDealRefused() {
         ui.devilDealRefused();
         // TODO Randomness for 3 events, 1 positive, 2 negative
+        int devilsChoice = rollD3();
+
+        switch (devilsChoice) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                System.out.println("Something went wrong in the devilDealRefused method.");
+        }
+    }
+
+    private int rollD3() {
+        return (int) ((Math.random() * 3) + 1);
     }
 }
