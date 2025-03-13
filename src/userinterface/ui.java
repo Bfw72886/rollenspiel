@@ -139,4 +139,12 @@ public abstract class ui {
                                 Nun enttäusche mich nicht und schreite voran.
                 """);
     }
+
+    public static void devilDealGrantedNothing() {
+        System.out.println("""
+                Dämon Mephisto: Mmh, ich gebe dir...
+                                Nichts! *hahaha*
+                                Du dachtest doch nicht wirklich, dass ich fair bin.
+                """);
+    }
 }

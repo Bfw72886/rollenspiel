@@ -99,6 +99,7 @@ public class Event {
                 }
                 break;
             case 3:
+                ui.devilDealGrantedNothing();
                 break;
             default:
                 ui.ownError("devilDealGranted");
