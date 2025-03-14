@@ -65,12 +65,17 @@ public abstract class ui {
     }
 
     public static void belohnungsAuswahl() {
-        System.out.println(
+        System.out.printf(
                 """
                         Wähle deine Belohnung:
-                        [j] Heilbrunnen
-                        [k] Gegenstandsgrube
-                        <Enter> zum Bestätigen"""
+                        %-35s %s
+                        %-35s %s
+                        %-35s %s
+                        <Enter> zum Bestätigen
+                        """,
+                "[j] Heilbrunnen aufsuchen", "(Auffüllen der Gesundheit)",
+                "[k] Gegenstandsgrube plündern", "(Erhöhen der Statuswerte)",
+                "[l] Dämonenkreis zeichnen", "(Dämonenkreis zum Preis von 20% Gesundheit)"
         );
     }
 

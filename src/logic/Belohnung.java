@@ -26,7 +26,7 @@ public class Belohnung {
         while (!inputValid) {
             ui.eingabeAufforderung();
             input = scanner.nextLine();
-            if (input.equals("j") || input.equals("k") ) {
+            if (input.equals("j") || input.equals("k") || input.equals("l") ) {
                 inputValid = true;
             }
         }
@@ -37,6 +37,9 @@ public class Belohnung {
                 break;
             case "k":
                 new Event(charakter).items();
+                break;
+            case "l":
+                new Event(charakter).devilDealTry();
                 break;
             default:
                 System.out.println("Something went wrong in the rewardselection.");
